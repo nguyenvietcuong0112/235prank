@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#EEF1FF"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/interest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/londrina_solid"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:textSize="@dimen/_24sdp"
+        android:shadowColor="@color/black"
+        android:shadowDx="5"
+        android:shadowDy="2"
+        android:textAlignment="center"
+        android:shadowRadius="1"
+        android:textColor="#FF9A51"
+        android:text="@string/interest"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/btnContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/button_state_color"
+        android:clickable="false"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_next_intro"
+        app:layout_constraintEnd_toEndOf="parent"
+       />
+
+    <CheckBox
+        android:id="@+id/cbTrackExpenses"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/interest_selector"
+        android:button="@null"
+        android:padding="12dp"
+        android:text="@string/office_pranks"
+        android:textColor="@color/interest_text_color"
+        app:layout_constraintEnd_toStartOf="@id/cbMonitorSavings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/interest" />
+
+    <CheckBox
+        android:id="@+id/cbMonitorSavings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/interest_selector"
+        android:button="@null"
+        android:padding="12dp"
+        android:text="@string/family_pranks"
+        android:textColor="@color/interest_text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cbTrackExpenses"
+        app:layout_constraintTop_toTopOf="@id/cbTrackExpenses" />
+
+    <CheckBox
+        android:id="@+id/cbAnalyzeSpending"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/interest_selector"
+        android:button="@null"
+        android:padding="12dp"
+        android:text="@string/fake_emergency_pranks"
+        android:textColor="@color/interest_text_color"
+        app:layout_constraintEnd_toStartOf="@id/cbOptimizeSpending"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbTrackExpenses" />
+
+    <CheckBox
+        android:id="@+id/cbOptimizeSpending"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/interest_selector"
+        android:button="@null"
+        android:padding="12dp"
+        android:text="@string/fake_job_interview_pranks"
+        android:textColor="@color/interest_text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cbAnalyzeSpending"
+        app:layout_constraintTop_toTopOf="@id/cbAnalyzeSpending" />
+
+    <CheckBox
+        android:id="@+id/cbPlanInvestments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/interest_selector"
+        android:button="@null"
+        android:padding="12dp"
+        android:text="@string/celebrity_impersonations"
+        android:textColor="@color/interest_text_color"
+        app:layout_constraintEnd_toStartOf="@id/cbFinancialReports"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbAnalyzeSpending" />
+
+    <CheckBox
+        android:id="@+id/cbFinancialReports"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/interest_selector"
+        android:button="@null"
+        android:padding="12dp"
+        android:text="@string/annoying_telemarketer_pranks"
+        android:textColor="@color/interest_text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cbPlanInvestments"
+        app:layout_constraintTop_toTopOf="@id/cbPlanInvestments" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_70sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="#5A5A5A"
+        android:text="@string/please_select_at_least_2_options_to_continue"
+        app:layout_constraintTop_toBottomOf="@id/cbPlanInvestments"/>
+
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/btn_next_loading"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateTint="#1590EA"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/fr_ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_ads_native"
+        android:paddingBottom="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/shimmer_native_language"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/ads_shimmer_native_language" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

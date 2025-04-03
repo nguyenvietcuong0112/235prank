@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //dev
+    <string name="app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+
+    <string name="inter_splash" translatable="false"></string>
+    <string name="inter_home" translatable="false"></string>
+    <string name="native_onboarding1" translatable="false"></string>
+    <string name="native_onboarding2" translatable="false"></string>
+    <string name="native_onboarding3" translatable="false"></string>
+    <string name="native_onboarding4" translatable="false"></string>
+    <string name="native_home" translatable="false"></string>
+    <string name="native_language" translatable="false"></string>
+    <string name="native_language_select" translatable="false"></string>
+
+    <string name="native_permission" translatable="false"></string>
+    <string name="native_video_call" translatable="false"></string>
+    <string name="native_message" translatable="false"></string>
+    <string name="inter_intro" translatable="false"></string>
+    <string name="inter_back_video_call" translatable="false"></string>
+    <string name="inter_back_message" translatable="false"></string>
+
+    <string name="banner_inline_intro" translatable="false"></string>
+    <string name="banner_inline_per" translatable="false"></string>
+
+
+    //new
+    <string name="native_full_intro" translatable="false"></string>
+    <string name="native_full_home" translatable="false"></string>
+    <string name="native_full_back_video" translatable="false"></string>
+    <string name="native_full_message" translatable="false"></string>
+
+
+    <string name="open_resume" translatable="false"></string>
+
+    <string name="banner_collap" translatable="false"></string>
+    <string name="banner_collapse_intro" translatable="false"></string>
+
+    <string name="AF_DEV_KEY" translatable="false">LikYKU2zUYTct7BoQ7MuJY</string>
+    <string name="facebook_app_id" translatable="false">1234</string>
+    <string name="facebook_client_token" translatable="false">56789</string>
+
+    //prod
+    <!--    <string name="app_id" translatable="</string>-->
+    <!--    <string name="inter_splash" translatable="false"></string>-->
+    <!--    <string name="inter_home" translatable="false"></string>-->
+
+    <!--    <string name="native_onboarding1" translatable="false"></string>-->
+    <!--    <string name="native_onboarding2" translatable="false"></string>-->
+    <!--    <string name="native_onboarding3" translatable="false"></string>-->
+    <!--    <string name="native_onboarding4" translatable="false"></string>-->
+    <!--    <string name="native_home" translatable="false"></string>-->
+    <!--    <string name="native_language" translatable="false"></string>-->
+    <!--    <string name="native_language_select" translatable="false"></string>-->
+
+    <!--    <string name="banner_inline_intro" translatable="false"></string>-->
+    <!--    <string name="banner_inline_per" translatable="false"></string>-->
+
+    <!--    <string name="open_resume" translatable="false"></string>-->
+
+    <!--    <string name="banner_collap" translatable="false"></string>-->
+
+    <!--    <string name="AF_DEV_KEY" translatable="false">LikYKU2zUYTct7BoQ7MuJY</string>-->
+    <!--    <string name="facebook_app_id" translatable="false"></string>-->
+    <!--    <string name="facebook_client_token" translatable="false"></string>-->
+
+    <!--    //1.0.2-->
+    <!--    <string name="native_permission" translatable="false"></string>-->
+    <!--    <string name="native_video_call" translatable="false"></string>-->
+    <!--    <string name="native_message" translatable="false"></string>-->
+    <!--    <string name="inter_intro" translatable="false"></string>-->
+    <!--    <string name="inter_back_video_call" translatable="false"></string>-->
+    <!--    <string name="inter_back_message" translatable="false"></string>-->
+
+
+</resources>
