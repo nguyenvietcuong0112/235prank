@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:text="Set time after"
             android:layout_marginStart="@dimen/_5sdp"
-            android:textColor="@android:color/black"
+            android:textColor="#3F1B65"
             android:textSize="18sp"
             android:fontFamily="@font/londrinasolidbold"
            />
@@ -49,10 +49,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:backgroundTint="#FF9A51"
+        android:backgroundTint="#F28C24"
         android:text="OK"
         android:fontFamily="@font/londrinasolidbold"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="16sp" />
 
 </LinearLayout>

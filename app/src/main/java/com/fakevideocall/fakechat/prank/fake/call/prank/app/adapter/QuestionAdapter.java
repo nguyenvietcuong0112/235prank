@@ -38,7 +38,6 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
         holder.itemView.setOnClickListener(v -> {
             listener.onQuestionClick(question);
 
-            // Xóa câu hỏi khỏi danh sách
             int adapterPosition = holder.getAdapterPosition();
             if (adapterPosition != RecyclerView.NO_POSITION) {
                 questions.remove(adapterPosition);

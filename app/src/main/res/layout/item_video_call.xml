@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:minHeight="150dp"
     android:padding="8dp"
     android:gravity="center"
     android:layout_margin="4dp"
@@ -11,8 +12,9 @@
 
     <ImageView
         android:id="@+id/item_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
         android:scaleType="centerCrop"
         android:padding="1dp"
         android:src="@drawable/johnnydeep"
@@ -23,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
+        android:visibility="gone"
         android:textSize="14sp"
         android:fontFamily="@font/londrinasolidbold"
         android:textStyle="bold"

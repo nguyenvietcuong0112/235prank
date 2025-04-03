@@ -94,7 +94,7 @@ public class HomeActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
-        loadBanner();
+//        loadBanner();
         loadInterHome();
         loadNative();
 

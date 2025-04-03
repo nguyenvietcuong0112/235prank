@@ -1,22 +1,12 @@
 package com.fakevideocall.fakechat.prank.fake.call.prank.app.activity.message;
 
-
-import android.content.Intent;
-
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.fakevideocall.fakechat.prank.fake.call.prank.app.R;
-import com.fakevideocall.fakechat.prank.fake.call.prank.app.activity.videocall.VideoCallActivity;
-import com.fakevideocall.fakechat.prank.fake.call.prank.app.activity.videocall.VideoPlayerActivity;
 import com.fakevideocall.fakechat.prank.fake.call.prank.app.adapter.MessageAdapter;
 import com.fakevideocall.fakechat.prank.fake.call.prank.app.base.BaseActivity;
 import com.fakevideocall.fakechat.prank.fake.call.prank.app.databinding.ActivityMessageBinding;
 import com.fakevideocall.fakechat.prank.fake.call.prank.app.model.Message;
-import com.fakevideocall.fakechat.prank.fake.call.prank.app.utils.Constant;
-import com.fakevideocall.fakechat.prank.fake.call.prank.app.utils.SharePreferenceUtils;
-import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.mallegan.ads.callback.InterCallback;
-import com.mallegan.ads.util.Admob;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,15 +17,9 @@ public class MessageActivity extends BaseActivity {
         ActivityMessageBinding binding = ActivityMessageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3);
-        gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
-            @Override
-            public int getSpanSize(int position) {
-                return position == 3 ? 3 : 1;
-            }
-        });
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         binding.recyclerView.setLayoutManager(gridLayoutManager);
+
         List<Message> messages = new ArrayList<>();
         messages.add(new Message("V", R.drawable.v));
         messages.add(new Message("Jungkook", R.drawable.jungkook));
@@ -55,8 +39,8 @@ public class MessageActivity extends BaseActivity {
         messages.add(new Message("Dwayne", R.drawable.dwayne));
         messages.add(new Message("Johnny Depp", R.drawable.johnnydeep));
         messages.add(new Message("Jennifer Lopez", R.drawable.jenniferlopez));
-        messages.add(new Message("Santa Claus", R.drawable.santa));
-        messages.add(new Message("Princess", R.drawable.princess));
+//        messages.add(new Message("Santa Claus", R.drawable.santa));
+//        messages.add(new Message("Princess", R.drawable.princess));
 
         messages.add(new Message("Spranlky 01", R.drawable.spranlky01));
         messages.add(new Message("Spranlky 02", R.drawable.spranlky02));
@@ -67,17 +51,11 @@ public class MessageActivity extends BaseActivity {
         messages.add(new Message("Spranlky 07", R.drawable.spranlky07));
         messages.add(new Message("Spranlky 08", R.drawable.spranlky08));
 
-
         MessageAdapter adapter = new MessageAdapter(this, messages);
         binding.recyclerView.setAdapter(adapter);
 
         binding.icback.setOnClickListener(v -> {
             onBackPressed();
         });
-
-
     }
-
-
-    
 }
