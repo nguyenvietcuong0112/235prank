@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Prank Call: Video Faker</string>
+    <string name="app_name">Prank Call: Fun Caller</string>
     <string name="tt_mnu_home">Home</string>
     <string name="tt_mnu_collection">Collection</string>
     <string name="tt_mnu_myscan">My scan</string>
@@ -11,19 +11,19 @@
     <string name="skip">Skip</string>
     <string name="next">Next</string>
     <string name="done">Done</string>
-    <string name="note_continue1">Make prank calls and have fun with friends!</string>
-    <string name="note_continue2">Choose from various prank call scenarios.</string>
-    <string name="note_continue3">Surprise your friends with unique and hilarious call setups!</string>
-    <string name="note_continue4">Select different scenarios and enjoy endless prank possibilities!</string>
+    <string name="note_continue1">Start Funny Video &amp; Message Pranks!</string>
+    <string name="note_continue2">Pick Your Favorite Stars to Prank!</string>
+    <string name="note_continue3">Fake Video Calls that Feel So Real!</string>
+    <string name="note_continue4">Chat and Have Fun with Your Idols!</string>
 
     <string name="step1">STEP 1</string>
     <string name="step2">STEP 2</string>
     <string name="step3">STEP 3</string>
     <string name="step4">STEP 4</string>
-    <string name="step_detail1">Select an image from your gallery or take a new photo.</string>
-    <string name="step_detail2">Use the erase tool to remove the background automatically.</string>
-    <string name="step_detail3">Fine-tune the erase effect with size and offset controls. </string>
-    <string name="step_detail4">Replace the background or keep it transparent, then save your image.</string>
+    <string name="step_detail1">Click the “continue” button to start walking</string>
+    <string name="step_detail2">Click the “continue” button to start walking</string>
+    <string name="step_detail3">Click the “continue” button to start walking</string>
+    <string name="step_detail4">Click the “continue” button to start walking</string>
     <string name="note_guide1"></string>
     <string name="note_guide2"></string>
     <string name="note_guide3"></string>

@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.fakevideocall.fakechat.prank.fake.call.prank.app'
+    namespace 'com.fakevideocall.fakechat.prank.fake.call.app'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.fakevideocall.fakechat.prank.fake.call.prank.app"
+        applicationId "com.fakevideocall.fakechat.prank.fake.call.app"
         minSdk 24
         targetSdk 34
         versionCode 100
@@ -18,7 +18,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         def formattedDate = new Date().format('MM.dd.yyyy')
-        archivesBaseName = "TR230_PrankCall_v${versionName}_(${versionCode})_${formattedDate}"
+        archivesBaseName = "TR235_PrankCall_v${versionName}_(${versionCode})_${formattedDate}"
     }
 
     buildTypes {

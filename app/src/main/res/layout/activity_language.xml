@@ -89,11 +89,11 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 
-        <com.fakevideocall.fakechat.prank.fake.call.prank.app.utils.language.UILanguageCustom
+        <com.fakevideocall.fakechat.prank.fake.call.app.utils.language.UILanguageCustom
             android:id="@+id/uiLanguage"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp"
             app:layout_constraintBottom_toTopOf="@+id/fr_ads"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

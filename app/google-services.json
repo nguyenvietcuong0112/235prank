@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "865001867418",
-    "project_id": "tr230-celebrity-prank-call",
-    "storage_bucket": "tr230-celebrity-prank-call.firebasestorage.app"
+    "project_number": "675682335835",
+    "project_id": "tr235-prank-call",
+    "storage_bucket": "tr235-prank-call.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:865001867418:android:28cc08c2c665bfce13b723",
+        "mobilesdk_app_id": "1:675682335835:android:029c63497fe3b826f7137e",
         "android_client_info": {
-          "package_name": "com.fakevideocall.fakechat.prank.fake.call.prank.app"
+          "package_name": "com.fakevideocall.fakechat.prank.fake.call.app"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDpqmsU2TbRW19qmKqRkSUi8jgd8fSrM2w"
+          "current_key": "AIzaSyA48HVcFjO9Y2YBXLSXgImj7U8ylw6JgGE"
         }
       ],
       "services": {

@@ -2,24 +2,21 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="#EEF1FF"
+    android:background="#F6CC36"
     android:layout_height="match_parent">
 
 
     <TextView
         android:id="@+id/interest"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/londrina_solid"
-        android:layout_marginTop="@dimen/_25sdp"
-        android:textSize="@dimen/_24sdp"
-        android:shadowColor="@color/black"
-        android:shadowDx="5"
-        android:shadowDy="2"
-        android:textAlignment="center"
-        android:shadowRadius="1"
-        android:textColor="#FF9A51"
-        android:text="@string/interest"
+        android:fontFamily="@font/londrinasolidbold"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_70sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="#333B86"
+        android:text="Who do you prank the most?"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
@@ -34,111 +31,105 @@
         android:layout_marginTop="@dimen/_30sdp"
         android:textColor="@color/white"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_next_intro"
+        android:src="@drawable/ic_checked_interest"
         app:layout_constraintEnd_toEndOf="parent"
-       />
+        />
 
-    <CheckBox
-        android:id="@+id/cbTrackExpenses"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:background="@drawable/interest_selector"
-        android:button="@null"
-        android:padding="12dp"
-        android:text="@string/office_pranks"
-        android:textColor="@color/interest_text_color"
-        app:layout_constraintEnd_toStartOf="@id/cbMonitorSavings"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/interest" />
 
-    <CheckBox
-        android:id="@+id/cbMonitorSavings"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:id="@+id/list"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:background="@drawable/interest_selector"
-        android:button="@null"
-        android:padding="12dp"
-        android:text="@string/family_pranks"
-        android:textColor="@color/interest_text_color"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/cbTrackExpenses"
-        app:layout_constraintTop_toTopOf="@id/cbTrackExpenses" />
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/interest"
+        android:background="@drawable/bg_white"
+        android:orientation="vertical">
+        <CheckBox
+            android:id="@+id/cbTrackExpenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:background="@drawable/interest_selector"
+            android:button="@null"
+            android:padding="12dp"
+            android:fontFamily="@font/londrinasolidbold"
+            android:text="Improve fitness &amp; endurance"
+            android:textColor="@color/interest_text_color"
+           />
 
-    <CheckBox
-        android:id="@+id/cbAnalyzeSpending"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:background="@drawable/interest_selector"
-        android:button="@null"
-        android:padding="12dp"
-        android:text="@string/fake_emergency_pranks"
-        android:textColor="@color/interest_text_color"
-        app:layout_constraintEnd_toStartOf="@id/cbOptimizeSpending"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cbTrackExpenses" />
+        <CheckBox
+            android:id="@+id/cbMonitorSavings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/interest_selector"
+            android:button="@null"
+            android:padding="12dp"
+            android:fontFamily="@font/londrinasolidbold"
+            android:text="Lose weight &amp; burn calories"
+            android:textColor="@color/interest_text_color"
+            app:layout_constraintTop_toBottomOf="@id/cbTrackExpenses"/>
 
-    <CheckBox
-        android:id="@+id/cbOptimizeSpending"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:background="@drawable/interest_selector"
-        android:button="@null"
-        android:padding="12dp"
-        android:text="@string/fake_job_interview_pranks"
-        android:textColor="@color/interest_text_color"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/cbAnalyzeSpending"
-        app:layout_constraintTop_toTopOf="@id/cbAnalyzeSpending" />
+        <CheckBox
+            android:id="@+id/cbAnalyzeSpending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/interest_selector"
+            android:button="@null"
+            android:padding="12dp"
+            android:fontFamily="@font/londrinasolidbold"
+            android:text="Stay healthy &amp; energized"
+            android:textColor="@color/interest_text_color"
+            app:layout_constraintTop_toBottomOf="@id/cbMonitorSavings"/>
 
-    <CheckBox
-        android:id="@+id/cbPlanInvestments"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:background="@drawable/interest_selector"
-        android:button="@null"
-        android:padding="12dp"
-        android:text="@string/celebrity_impersonations"
-        android:textColor="@color/interest_text_color"
-        app:layout_constraintEnd_toStartOf="@id/cbFinancialReports"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cbAnalyzeSpending" />
+        <CheckBox
+            android:id="@+id/cbOptimizeSpending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/interest_selector"
+            android:button="@null"
+            android:padding="12dp"
+            android:fontFamily="@font/londrinasolidbold"
+            android:text="Track daily movement"
+            android:textColor="@color/interest_text_color"
+            app:layout_constraintTop_toBottomOf="@id/cbAnalyzeSpending"/>
 
-    <CheckBox
-        android:id="@+id/cbFinancialReports"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:background="@drawable/interest_selector"
-        android:button="@null"
-        android:padding="12dp"
-        android:text="@string/annoying_telemarketer_pranks"
-        android:textColor="@color/interest_text_color"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/cbPlanInvestments"
-        app:layout_constraintTop_toTopOf="@id/cbPlanInvestments" />
+        <CheckBox
+            android:id="@+id/cbPlanInvestments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/interest_selector"
+            android:button="@null"
+            android:padding="12dp"
+            android:fontFamily="@font/londrinasolidbold"
+            android:text="Build a walking habit"
+            android:textColor="@color/interest_text_color"
+            app:layout_constraintTop_toBottomOf="@id/cbOptimizeSpending"/>
+    </LinearLayout>
+
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/londrina_solid"
         android:layout_marginStart="@dimen/_10sdp"
         android:paddingEnd="@dimen/_70sdp"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:textSize="@dimen/_12sdp"
         android:textColor="#5A5A5A"
-        android:text="@string/please_select_at_least_2_options_to_continue"
-        app:layout_constraintTop_toBottomOf="@id/cbPlanInvestments"/>
+        android:text="Please select at least 2 options to continue."
+        app:layout_constraintTop_toBottomOf="@id/list"/>
+
 
 
     <androidx.core.widget.ContentLoadingProgressBar
