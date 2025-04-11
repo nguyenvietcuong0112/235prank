@@ -70,7 +70,7 @@ public class SettingActivity  extends BaseActivity {
 
 
         binding.btnPrivacyPolicy.setOnClickListener(v -> {
-            Uri uri = Uri.parse("https://triple888dev.netlify.app/policy");
+            Uri uri = Uri.parse("https://whyteabraham.netlify.app/policy");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
         });

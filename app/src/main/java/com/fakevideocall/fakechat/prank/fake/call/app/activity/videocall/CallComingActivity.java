@@ -3,6 +3,7 @@ package com.fakevideocall.fakechat.prank.fake.call.app.activity.videocall;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.Image;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -17,7 +18,10 @@ import com.fakevideocall.fakechat.prank.fake.call.app.model.Video;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+
 public class CallComingActivity extends AppCompatActivity {
+    private MediaPlayer mediaPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,15 +49,47 @@ public class CallComingActivity extends AppCompatActivity {
             finish();
             return;
         }
+        phatNhacChuong();
 
         declineButton.setOnClickListener(v -> {
+            tatNhacChuong();
             finish();
         });
 
         acceptButton.setOnClickListener(v -> {
+            tatNhacChuong();
             Intent intent = new Intent(this, VideoPlayerActivity.class);
             intent.putExtra("videoPath", video.getVideoResId());
             this.startActivity(intent);
         });
+    }
+
+    private void phatNhacChuong() {
+        // Đặt nhạc chuông từ thư mục raw
+        mediaPlayer = MediaPlayer.create(this, R.raw.call_coming);
+        mediaPlayer.setLooping(true); // Lặp lại liên tục
+        mediaPlayer.start();
+    }
+
+    private void tatNhacChuong() {
+        if (mediaPlayer != null) {
+            if (mediaPlayer.isPlaying()) {
+                mediaPlayer.stop();
+            }
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        tatNhacChuong();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        tatNhacChuong();
     }
 }
