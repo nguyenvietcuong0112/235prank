@@ -70,12 +70,16 @@ public class PermissionActivity extends BaseActivity {
 
     private void loadAds() {
 
-        if (!SharePreferenceUtils.isOrganic(PermissionActivity.this)) {
             Admob.getInstance().loadNativeAd(this, getString(R.string.native_permission), new NativeCallback() {
                 @Override
                 public void onNativeAdLoaded(NativeAd nativeAd) {
                     super.onNativeAdLoaded(nativeAd);
-                    NativeAdView adView = (NativeAdView) LayoutInflater.from(PermissionActivity.this).inflate(R.layout.layout_native_language_non_organic, null);
+                    NativeAdView adView = new NativeAdView(PermissionActivity.this);
+                    if (!SharePreferenceUtils.isOrganic(PermissionActivity.this)) {
+                        adView = (NativeAdView) LayoutInflater.from(PermissionActivity.this).inflate(R.layout.layout_native_language_non_organic, null);
+                    } else {
+                        adView = (NativeAdView) LayoutInflater.from(PermissionActivity.this).inflate(R.layout.layout_native_language, null);
+                    }
                     binding.frAds.setVisibility(View.VISIBLE);
                     binding.frAds.removeAllViews();
                     binding.frAds.addView(adView);
@@ -88,9 +92,6 @@ public class PermissionActivity extends BaseActivity {
                     binding.frAds.setVisibility(View.GONE);
                 }
             });
-        } else {
-            binding.frAds.setVisibility(View.GONE);
-        }
 
     }
 

@@ -6,9 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/bg_header"
-    tools:context=".activity.videocall.VideoCallActivity">
+    tools:context=".activity.videocall.VideoCallActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+
+<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -130,6 +132,22 @@
                     android:textColor="#C0B2CE"
                     android:textStyle="bold" />
             </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <include
+                android:id="@+id/banner"
+                layout="@layout/layout_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
         </LinearLayout>
 
         <!-- RecyclerView -->

@@ -254,7 +254,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
 
 
     private void loadInter() {
-//        if(!SharePreferenceUtils.isOrganic(VideoPlayerActivity.this)){
+        if(!SharePreferenceUtils.isOrganic(VideoPlayerActivity.this)){
             Admob.getInstance().loadInterAds(this, getString(R.string.inter_back_video_call), new InterCallback() {
                 @Override
                 public void onInterstitialLoad(InterstitialAd interstitialAd) {
@@ -262,6 +262,6 @@ public class VideoPlayerActivity extends AppCompatActivity {
                     Constant.interBackVideo = interstitialAd;
                 }
             });
-//        }
+        }
     }
 }

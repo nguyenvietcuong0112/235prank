@@ -17,6 +17,8 @@ import com.fakevideocall.fakechat.prank.fake.call.app.adapter.VideoCallAdapter;
 import com.fakevideocall.fakechat.prank.fake.call.app.base.BaseActivity;
 import com.fakevideocall.fakechat.prank.fake.call.app.databinding.ActivityVideocallBinding;
 import com.fakevideocall.fakechat.prank.fake.call.app.model.Video;
+import com.fakevideocall.fakechat.prank.fake.call.app.utils.SharePreferenceUtils;
+import com.mallegan.ads.util.Admob;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +47,16 @@ public class VideoCallActivity extends BaseActivity {
         binding.icback.setOnClickListener(v -> {
             onBackPressed();
         });
+        loadBanner();
+    }
+
+
+    private void loadBanner() {
+            Admob.getInstance().loadCollapsibleBanner(
+                    this,
+                    getString(R.string.banner_collap),
+                    "top"
+            );
     }
 
     private void setupTabBar() {

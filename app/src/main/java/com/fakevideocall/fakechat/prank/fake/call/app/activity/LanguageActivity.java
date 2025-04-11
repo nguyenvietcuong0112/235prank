@@ -85,7 +85,18 @@ public class LanguageActivity extends BaseActivity implements UILanguageCustom.O
                 if (fromSettings) {
                     finish();
                 } else {
-                    startActivity(new Intent(LanguageActivity.this, IntroActivity.class));
+                    if (!SharePreferenceUtils.isOrganic(LanguageActivity.this)) {
+                        startActivity(new Intent(LanguageActivity.this, ActivityLoadNativeFullLanguage.class));
+                        finish();
+                    } else {
+//                        sharePreferenceUtils = new SharePreferenceUtils(this);
+//                        int counterValue = sharePreferenceUtils.getCurrentValue();
+//                        if (counterValue == 0) {
+                        startActivity(new Intent(LanguageActivity.this, IntroActivity.class));
+//                        } else {
+//                            startActivity(new Intent(LanguageActivity.this, MainActivity.class));
+//                        }
+                    }
                 }
             } else {
                 Toast.makeText(this, "Please choose a language to continue", Toast.LENGTH_LONG).show();

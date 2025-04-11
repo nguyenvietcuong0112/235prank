@@ -55,7 +55,7 @@
             android:button="@null"
             android:padding="12dp"
             android:fontFamily="@font/londrinasolidbold"
-            android:text="Improve fitness &amp; endurance"
+            android:text="Friends"
             android:textColor="@color/interest_text_color"
            />
 
@@ -69,7 +69,7 @@
             android:button="@null"
             android:padding="12dp"
             android:fontFamily="@font/londrinasolidbold"
-            android:text="Lose weight &amp; burn calories"
+            android:text="Family members"
             android:textColor="@color/interest_text_color"
             app:layout_constraintTop_toBottomOf="@id/cbTrackExpenses"/>
 
@@ -83,7 +83,7 @@
             android:button="@null"
             android:padding="12dp"
             android:fontFamily="@font/londrinasolidbold"
-            android:text="Stay healthy &amp; energized"
+            android:text="Coworkers"
             android:textColor="@color/interest_text_color"
             app:layout_constraintTop_toBottomOf="@id/cbMonitorSavings"/>
 
@@ -97,7 +97,7 @@
             android:button="@null"
             android:padding="12dp"
             android:fontFamily="@font/londrinasolidbold"
-            android:text="Track daily movement"
+            android:text="Strangers"
             android:textColor="@color/interest_text_color"
             app:layout_constraintTop_toBottomOf="@id/cbAnalyzeSpending"/>
 
@@ -111,7 +111,7 @@
             android:button="@null"
             android:padding="12dp"
             android:fontFamily="@font/londrinasolidbold"
-            android:text="Build a walking habit"
+            android:text="My partner"
             android:textColor="@color/interest_text_color"
             app:layout_constraintTop_toBottomOf="@id/cbOptimizeSpending"/>
     </LinearLayout>

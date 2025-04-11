@@ -42,6 +42,22 @@
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_settings" />
             </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <include
+                    android:id="@+id/banner"
+                    layout="@layout/layout_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -56,24 +72,15 @@
                     android:layout_height="@dimen/_120sdp"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="@dimen/_20sdp"
-                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:background="@drawable/bg_video_call"
                     android:orientation="horizontal" />
-
-
-                <LinearLayout
-                    android:id="@+id/btn_message"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_120sdp"
-                    android:layout_marginHorizontal="16dp"
-                    android:background="@drawable/bg_message"
-                    android:orientation="horizontal" />
-
                 <FrameLayout
                     android:id="@+id/frAds"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="@dimen/_10sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
@@ -81,6 +88,17 @@
                     <include layout="@layout/ads_shimmer_native_home" />
 
                 </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/bg_message"
+                    android:orientation="horizontal" />
+
+
             </LinearLayout>
 
 

@@ -53,10 +53,11 @@ public class HomeActivity extends BaseActivity {
                         startActivity(intent);
                         loadInterHome();
                     }
+
                     @Override
                     public void onAdClosedByUser() {
                         super.onAdClosedByUser();
-                        if (!SharePreferenceUtils.isOrganic(getApplicationContext())){
+                        if (!SharePreferenceUtils.isOrganic(getApplicationContext())) {
                             Intent intent = new Intent(HomeActivity.this, ActivityLoadNativeFull.class);
                             intent.putExtra(ActivityLoadNativeFull.EXTRA_NATIVE_AD_ID, getString(R.string.native_full_home));
                             startActivity(intent);
@@ -79,10 +80,11 @@ public class HomeActivity extends BaseActivity {
                         startActivity(intent);
                         loadInterHome();
                     }
+
                     @Override
                     public void onAdClosedByUser() {
                         super.onAdClosedByUser();
-                        if (!SharePreferenceUtils.isOrganic(getApplicationContext())){
+                        if (!SharePreferenceUtils.isOrganic(getApplicationContext())) {
                             Intent intent = new Intent(HomeActivity.this, ActivityLoadNativeFull.class);
                             intent.putExtra(ActivityLoadNativeFull.EXTRA_NATIVE_AD_ID, getString(R.string.native_full_home));
                             startActivity(intent);
@@ -95,29 +97,23 @@ public class HomeActivity extends BaseActivity {
             }
         });
 //        loadBanner();
-        loadInterHome();
-        loadNative();
+//        loadInterHome();
+//        loadAds();
 
     }
 
-
-
-
-
-    private void loadNative() {
-        if (!SharePreferenceUtils.isOrganic(HomeActivity.this)) {
-                loadAds();
-        } else {
-            binding.frAds.setVisibility(View.GONE);
-        }
-    }
 
     private void loadAds() {
         Admob.getInstance().loadNativeAd(this, getString(R.string.native_home), new NativeCallback() {
             @Override
             public void onNativeAdLoaded(NativeAd nativeAd) {
                 super.onNativeAdLoaded(nativeAd);
-                NativeAdView adView = (NativeAdView) LayoutInflater.from(HomeActivity.this).inflate(R.layout.layout_native_home, null);
+                NativeAdView adView = new NativeAdView(HomeActivity.this);
+                if (!SharePreferenceUtils.isOrganic(HomeActivity.this)) {
+                    adView = (NativeAdView) LayoutInflater.from(HomeActivity.this).inflate(R.layout.layout_native_language_non_organic, null);
+                } else {
+                    adView = (NativeAdView) LayoutInflater.from(HomeActivity.this).inflate(R.layout.layout_native_language, null);
+                }
                 binding.frAds.setVisibility(View.VISIBLE);
                 binding.frAds.removeAllViews();
                 binding.frAds.addView(adView);
@@ -133,19 +129,19 @@ public class HomeActivity extends BaseActivity {
     }
 
     private void loadBanner() {
-//        if (!SharePreferenceUtils.isOrganic(this)) {
+        if (!SharePreferenceUtils.isOrganic(this)) {
             Admob.getInstance().loadCollapsibleBanner(
                     this,
                     getString(R.string.banner_collap),
                     "top"
             );
-//        } else {
-//            binding.llBanner.setVisibility(View.GONE);
-//        }
+        } else {
+            binding.llBanner.setVisibility(View.GONE);
+        }
     }
 
     private void loadInterHome() {
-//        if(!SharePreferenceUtils.isOrganic(this)){
+        if (!SharePreferenceUtils.isOrganic(this)) {
             Admob.getInstance().loadInterAds(this, getString(R.string.inter_home), new InterCallback() {
                 @Override
                 public void onInterstitialLoad(InterstitialAd interstitialAd) {
@@ -153,8 +149,16 @@ public class HomeActivity extends BaseActivity {
                     Constant.interHome = interstitialAd;
                 }
             });
-//    }
+        }
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadBanner();
+        loadAds();
+        loadInterHome();
     }
 
 }
